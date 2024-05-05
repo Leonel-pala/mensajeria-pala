@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensajeria pala</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/scroll.css" />
+    <link rel="stylesheet" href="./src/css/form.css" />
+    <script src="./src/js/javita.js" type="module"></script>
+  </head>
+  <body>
+    <div id="mensajeria">
+      <h2 id="nombre"></h2>
+      <section id="usuarios">
+        <h3>Chats</h3>
+        <a class="chats active" data-id="-1" href="#?id=-1">General </a>
+      </section>
+      <section id="chat">
+        <h3 id="chatNombre">General</h3>
+        <img src="./src/img/arrow-left.png" id="arrowLeft" alt="" />
+        <div id="message"></div>
+        <form id="form">
+          <input
+            type="text"
+            name="message"
+            id="input"
+            placeholder="Escribete un mensajete"
+            autocomplete="off"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+    <div id="loginAndSignUp">
+      <form class="form" id="formLogin"></form>
+      <form class="form" id="formSignUp"></form>
+      <div id="loaderForm" class="loader"></div>
+      <span id="formError"></span>
+    </div>
+  </body>
+</html>

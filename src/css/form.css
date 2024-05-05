@@ -1,0 +1,127 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #6b5aff;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+  position: absolute;
+  left: 50%;
+  top: 50%; /* Añade esto para centrarlo verticalmente */
+  transform: translate(-50%, -50%) rotate(0); /* Centrar horizontal y verticalmente */
+}
+@keyframes l3 {
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+#loginAndSignUp {
+  position: absolute;
+  width: 412px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 30px;
+  background: #2c2c2c;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form > h3 {
+  font-size: 25px;
+  color: #715aff;
+  margin-bottom: 5px;
+}
+
+#formError {
+  position: absolute;
+  display: inline-block;
+  width: max-content;
+  background: red;
+  padding: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  top: -40px;
+  z-index: -1;
+  opacity: 0;
+}
+.subir {
+  all: unset;
+  width: max-content;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: auto;
+  text-align: center;
+  border: 3px #715aff solid;
+}
+.inputText {
+  all: unset;
+  background: #535162;
+  margin-bottom: 7px;
+  padding: 1px 3px;
+}
+.subir:active {
+  transform: scale(1.01);
+}
+#formLogin .subir {
+  background: #715aff;
+}
+#formSignUp > .subir {
+  color: #715aff;
+}
+#formError.active {
+  animation: aparecer 2.5s;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #loginAndSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 30px;
+    background: #2c2c2c;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: 550px;
+  }
+  #line::before {
+    content: "";
+    width: 95%;
+    background: #6b5aff;
+    position: absolute;
+    height: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,33 @@
+#usuarios::-webkit-scrollbar {
+  width: 10px;
+}
+
+#usuarios::-webkit-scrollbar-track {
+  background: #3a3a3a;
+  border-radius: 5px;
+}
+
+#usuarios::-webkit-scrollbar-thumb {
+  background: #715aff;
+  border-radius: 5px;
+}
+#usuarios::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#message::-webkit-scrollbar {
+  width: 5px;
+}
+
+#message::-webkit-scrollbar-track {
+  background: #3a3a3a;
+  border-radius: 5px;
+}
+
+#message::-webkit-scrollbar-thumb {
+  background: #715aff;
+  border-radius: 5px;
+}
+#message::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
