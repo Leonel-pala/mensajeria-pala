@@ -1,4 +1,4 @@
-const serverUrl = "https://servermensajeriapala.onrender.com/";
+const serverUrl = "https://servermensajeriapala.onrender.com";
 let listaUsuarios;
 async function getUser() {
   try {
