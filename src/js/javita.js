@@ -1,6 +1,6 @@
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
-const socket = io("http://localhost:4000/");
-const serverUrl = "http://localhost:4000";
+const socket = io("https://servermensajeriapala.onrender.com/");
+const serverUrl = "https://servermensajeriapala.onrender.com";
 const $input = document.querySelector("#input");
 const $messages = document.getElementById("message");
 const $form = document.querySelector("#form");

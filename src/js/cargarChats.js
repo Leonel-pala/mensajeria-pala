@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost:4000";
+const serverUrl = "https://servermensajeriapala.onrender.com/";
 const $usuarios = document.querySelector("#usuarios");
 import loadMsg from "./cargarMensajes.js";
 import chatActive from "./arrowLeft.js";

@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost:4000";
+const serverUrl = "https://servermensajeriapala.onrender.com";
 
 getUser().then((resultado) => {
   document.getElementById("loader").style.display = "none";
