@@ -1,4 +1,5 @@
-const serverUrl = "https://servermensajeriapala.onrender.com";
+import urlServerEpico from "./url.js";
+const serverUrl = urlServerEpico;
 let listaUsuarios;
 async function getUser() {
   try {
@@ -31,9 +32,11 @@ const loadMsg = async (emisor) => {
       $messages.innerHTML = "";
 
       for (let i = 0; i < mensajesLista.length; i++) {
+        const contenido = document.createElement("span");
+        contenido.textContent = mensajesLista[i].contenido;
         const item = `<span class="${
           mensajesLista[i].id_emisor == receptor ? "emisor" : "receptor"
-        }">${mensajesLista[i].contenido}</span>`;
+        }">${contenido.innerHTML}</span>`;
         $messages.insertAdjacentHTML("beforeend", item);
       }
     } catch (error) {
@@ -48,9 +51,11 @@ const loadMsg = async (emisor) => {
       const mensajesLista = await response.json();
       $messages.innerHTML = "";
       for (let i = 0; i < mensajesLista.length; i++) {
+        const contenido = document.createElement("span");
+        contenido.textContent = mensajesLista[i].contenido;
         const item = `<span class="${
           mensajesLista[i].id_emisor == receptor ? "emisor" : "receptor"
-        }">${mensajesLista[i].contenido}<small>${
+        }">${contenido.innerHTML}<small>${
           mensajesLista[i].id_emisor == receptor ? "" : mensajesLista[i].emisor
         }</small></span>`;
         $messages.insertAdjacentHTML("beforeend", item);

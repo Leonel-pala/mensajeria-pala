@@ -1,4 +1,5 @@
-const serverUrl = "https://servermensajeriapala.onrender.com";
+import urlServerEpico from "./url.js";
+const serverUrl = urlServerEpico;
 
 getUser().then((resultado) => {
   document.getElementById("loader").style.display = "none";

@@ -1,6 +1,7 @@
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
-const socket = io("https://servermensajeriapala.onrender.com/");
-const serverUrl = "https://servermensajeriapala.onrender.com";
+import urlServerEpico from "./url.js";
+const serverUrl = urlServerEpico;
+const socket = io(serverUrl + "/");
 const $input = document.querySelector("#input");
 const $messages = document.getElementById("message");
 const $form = document.querySelector("#form");

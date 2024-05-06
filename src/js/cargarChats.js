@@ -1,4 +1,5 @@
-const serverUrl = "https://servermensajeriapala.onrender.com";
+import urlServerEpico from "./url.js";
+const serverUrl = urlServerEpico;
 const $usuarios = document.querySelector("#usuarios");
 import loadMsg from "./cargarMensajes.js";
 import chatActive from "./arrowLeft.js";
